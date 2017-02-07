@@ -136,6 +136,14 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Global.asax" />
+    <EntityDeploy Include="Models\DB\DemoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DemoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DB\DemoModel.edmx.diagram">
+      <DependentUpon>DemoModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Models\DB\DemoModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DemoModel.edmx</DependentUpon>
@@ -146,7 +154,6 @@
       <DependentUpon>DemoModel.edmx</DependentUpon>
       <LastGenOutput>DemoModel.cs</LastGenOutput>
     </Content>
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -190,6 +197,7 @@
     <Compile Include="Models\DB\SYSUserRole.cs">
       <DependentUpon>DemoModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EntityManager\DemoDBEntities.cs" />
     <Compile Include="Models\EntityManager\UserManager.cs" />
     <Compile Include="Models\ViewModel\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,13 +205,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <EntityDeploy Include="Models\DB\DemoModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DemoModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DB\DemoModel.edmx.diagram">
-      <DependentUpon>DemoModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Welcome.cshtml" />
